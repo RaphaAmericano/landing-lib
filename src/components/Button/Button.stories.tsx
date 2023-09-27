@@ -9,7 +9,8 @@ type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
     args: {
-        label: "Primary"
+        label: "Primary",
+        className: "inline-block py-2 px-4 text-black font-bold no-underline"
     } 
 }
 

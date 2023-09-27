@@ -6,7 +6,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   body {
-    background-color: black;
     font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 `;
