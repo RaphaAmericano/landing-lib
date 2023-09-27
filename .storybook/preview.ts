@@ -1,5 +1,15 @@
 import type { Preview } from "@storybook/react";
-import "../src/tailwind.css"
+import "../src/tailwind.css";
+
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: black;
+    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+`;
 
 const preview: Preview = {
   parameters: {
@@ -11,6 +21,9 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [withThemeFromJSXProvider({
+    GlobalStyles
+  })],
 };
 
 export default preview;

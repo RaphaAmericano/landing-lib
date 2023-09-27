@@ -20,4 +20,18 @@ export const Secondary: Story = {
     }
 }
 
+export const Active: Story = {
+    args: {
+        ...Primary.args, 
+        label: "Secondary"
+    }
+}
+
+export const Rounded: Story = {
+    args: {
+        ...Primary.args, 
+        label: "Secondary"
+    }
+}
+
 export default meta;
