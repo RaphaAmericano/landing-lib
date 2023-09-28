@@ -4,7 +4,8 @@ import ButtonStyle from "./Button.styles"
 import ButtonProps from "./Button.props"
 
 const Button = (props: ButtonProps, ref:ForwardedRef<HTMLButtonElement> ) => {
-    return <ButtonStyle ref={ref} {...props} />
+    const { children, ...restProps } = props;
+    return <ButtonStyle ref={ref} {...restProps}>{children}</ButtonStyle>
 }
 
 export default forwardRef(Button);
