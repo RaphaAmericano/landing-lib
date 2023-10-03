@@ -6,7 +6,7 @@ const { Primary } = composeStories(stories)
 
 test("renders primary button with default values", () => {
     console.log(Primary)
-    render(<Primary />)
+    // render(<Primary />)
     const buttonElement = screen.getByRole("button")
 
     expect(buttonElement).not.toBeNull()    
