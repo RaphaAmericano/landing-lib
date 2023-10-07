@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>
 export const Primary: Story = {
     args: {
         label: "Primary",
-        className: "inline-block py-2 px-4 text-black font-bold no-underline"
+        // className: "inline-block py-2 px-4 text-black font-bold no-underline"
     },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
