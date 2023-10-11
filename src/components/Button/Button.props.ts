@@ -1,5 +1,5 @@
-import { ButtonHTMLAttributes } from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react"
 export default interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    label: string;
+    children: ReactNode;
     className?: string;
 }

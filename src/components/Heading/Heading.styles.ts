@@ -9,8 +9,6 @@ type HeadingTag = "h1" | "h2" | "h3" | "h4"| "h5" | "h6"
 //    return StyledComponent
 // }
 
-const HeadingStyle = styled.h1.attrs((attrs) => {
-    return attrs
-})<HeadingProps>``
+const HeadingStyle = styled.h1<HeadingProps>``
 
 export default HeadingStyle;
