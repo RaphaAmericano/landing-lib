@@ -3,7 +3,12 @@ on:
   push:
     branches:
       - master # if any push happens on branch `main`, run this workflow. You could also add `paths` to detect changes in specific folder
-
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
