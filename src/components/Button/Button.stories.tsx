@@ -20,25 +20,19 @@ export const Primary: Story = {
     }
 }
 
-export const Secondary: Story = {
-    args: {
-        ...Primary.args, 
-        children: "Secondary",
-        className: "inline-block py-2 px-4 text-blue font-bold no-underline"
-    }
-}
-
 export const Active: Story = {
     args: {
         ...Primary.args, 
-        children: "Secondary"
+        children: "Secondary",
+        className: "inline-block py-2 px-4 text-black font-bold no-underline"
     }
 }
 
 export const Rounded: Story = {
     args: {
         ...Primary.args, 
-        children: "Secondary"
+        children: "Secondary",
+        className:"mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
     }
 }
 
