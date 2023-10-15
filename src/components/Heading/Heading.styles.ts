@@ -1,14 +1,10 @@
 import styled from "styled-components"
-import HeadingProps from "./Heading.props"
-type HeadingTag = "h1" | "h2" | "h3" | "h4"| "h5" | "h6"
-// interface StyledHeadingProps {
-//     as: HeadingTag;
-// }
-// function HeadingComponent<T extends StyledHeadingProps>({ as } : T ){
-//    const StyledComponent = styled[as]
-//    return StyledComponent
-// }
+import type { HeadingStyleProps, HeadingTag } from "./Heading.props"
 
-const HeadingStyle = styled.h1<HeadingProps>``
+function HeadingStyle(tag: HeadingTag){
+    return styled[tag].attrs((attrs) => ({
+            className: `my-4 text-5xl font-bold leading-tight ${attrs.className}`
+        }))<HeadingStyleProps>``
+}
 
 export default HeadingStyle;

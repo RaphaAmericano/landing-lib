@@ -36,4 +36,12 @@ export const Rounded: Story = {
     }
 }
 
+export const Filled: Story = {
+    args: {
+        ...Primary.args, 
+        children: "Filled",
+        className:"mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+    }
+}
+
 export default meta;

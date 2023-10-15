@@ -3,8 +3,9 @@ import HeadingProps from "./Heading.props"
 import HeadingStyle from "./Heading.styles"
 
 const Heading = (props: HeadingProps ) => {
-    const { text, ...restProps } = props; 
-    return <h1 {...restProps}>{text}</h1>
+    const { tag, children, ...restProps } = props;
+    const HeadingComponent = HeadingStyle(tag); 
+    return <HeadingComponent {...restProps}>{children}</HeadingComponent>
 }
 
 export default Heading
