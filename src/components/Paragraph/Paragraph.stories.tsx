@@ -21,4 +21,16 @@ export const ParagraphBasic: Story = {
     }
 }
 
+export const ParagraphSmall: Story = {
+    args: {
+        children: "lorem ipsum",
+        className:"text-3xl text-gray-800 font-bold leading-none mb-3"
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+        const primaryHeading = canvas.getByRole("p")
+        await expect(primaryHeading).toBeInTheDocument()
+    }
+}
+
 export default meta;

@@ -22,10 +22,30 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies and build test coverage
+        run: | 
+          npm install 
+          npm run test:coverage
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./docs/coverage
+
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}/coverage
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
