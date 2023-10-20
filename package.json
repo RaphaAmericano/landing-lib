@@ -8,8 +8,10 @@
     "storybook-build": "storybook build",
     "build-storybook": "storybook build -o docs/storybook",
     "test": "jest",
-    "test:watch":"jest --watch",
-    "test:coverage":"jest --coverage"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json",
+    "test:generate-output:watch": "jest --json --outputFile=.jest-test-results.json --watch"
   },
   "author": "",
   "license": "ISC",
@@ -49,5 +51,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.8"
+  },
+  "dependencies": {
+    "@storybook/addon-jest": "^7.5.1"
   }
 }
