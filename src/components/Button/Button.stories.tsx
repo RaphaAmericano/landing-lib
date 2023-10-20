@@ -3,9 +3,10 @@ import Button from "./Button"
 import { within } from "@testing-library/react"
 import { expect } from "@storybook/jest"
 
+
 const meta: Meta<typeof Button> = {
     title:"Button",
-    component: Button,
+    component: Button
 }
 type Story = StoryObj<typeof Button>
 
@@ -17,7 +18,7 @@ export const Primary: Story = {
         const canvas = within(canvasElement);
         const primaryButton = canvas.getByRole("button")
         await expect(primaryButton).toBeInTheDocument()
-    }
+    },
 }
 
 export const Active: Story = {
