@@ -19,9 +19,9 @@ export const Primary: Story = {
         const primaryButton = canvas.getByRole("button")
         await expect(primaryButton).toBeInTheDocument()
     },
-    parameters: {
-        jest: "Button.test.ts"
-    }
+    // parameters: {
+    //     jest: "Button.test.ts"
+    // }
 }
 
 export const Active: Story = {
