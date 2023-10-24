@@ -4,7 +4,7 @@ import "../src/tailwind.css";
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import { createGlobalStyle } from 'styled-components';
 import { withTests } from "@storybook/addon-jest"
-import results from "../jest-test-results.json"
+// import results from "../jest-test-results.json"
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -26,7 +26,7 @@ const preview: Preview = {
     withThemeFromJSXProvider({
       GlobalStyles
     }),
-    withTests({ results })
+    // withTests({ results })
   ],
 };
 
