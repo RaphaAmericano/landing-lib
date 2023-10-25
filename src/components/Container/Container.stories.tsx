@@ -12,6 +12,7 @@ type Story = StoryObj<typeof Container>
 export const Primary: Story = {
     args: {
         children: "Primary",
+        className: "bg-blue"
     },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
