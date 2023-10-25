@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import clsx from "clsx"
 import type { HeadingStyleProps, HeadingTag } from "./Heading.props"
 
 function HeadingStyle(tag: HeadingTag){
     return styled[tag].attrs((attrs) => ({
-            className: attrs.className ? `my-4 text-5xl font-bold leading-tight ${attrs.className}` : `my-4 text-5xl font-bold leading-tight`
+            className: clsx(attrs.className, `my-4 text-5xl font-bold leading-tight`)
         }))<HeadingStyleProps>``
 }
 
