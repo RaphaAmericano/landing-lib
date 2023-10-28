@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies and build Storybook
         run: | 
           npm install 
+          npm run test:generate-output
           npm run build-storybook
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
