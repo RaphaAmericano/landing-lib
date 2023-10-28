@@ -2,3 +2,4 @@
 /docs-build
 /docs
 jest-test-results.json
+.jest-test-results.json
