@@ -20,7 +20,7 @@ export const Primary: Story = {
         await expect(primaryButton).toBeInTheDocument()
     },
     parameters: {
-        jest: "Button.test.ts"
+        jest: "Button.test.tsx"
     }
 }
 
