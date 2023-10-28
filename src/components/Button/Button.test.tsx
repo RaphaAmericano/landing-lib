@@ -24,6 +24,9 @@ describe("Button Test", () => {
       // expect(childrenText).not.toBeInTheDocument();
     });
 
-    
+    test("shoud num be 1", () => {
+      const num = 1;
+      expect(num).toBe(1)
+    } )
 
 })
