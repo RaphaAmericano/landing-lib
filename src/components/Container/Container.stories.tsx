@@ -16,12 +16,12 @@ export const Primary: Story = {
     },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
-        const primaryContainer = canvas.getByRole("section")
+        const primaryContainer = canvas.getByRole("div")
         await expect(primaryContainer).toBeInTheDocument()
     },
-    // parameters: {
-    //     jest: "Container.test.ts"
-    // }
+    parameters: {
+        jest: "Container.test.tsx"
+    }
 }
 
 export default meta;

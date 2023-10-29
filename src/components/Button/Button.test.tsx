@@ -12,10 +12,10 @@ const { Active, Primary } = composeStories(stories)
 
 describe("Button Test", () => {
   test('Validates form', () => {
-      render(<Primary />);
+      render(<Primary />)
       const buttonElement = screen.getByRole('button', {
         name: 'Primary',
-      });
+      })
       
       
       // fireEvent.click(buttonElement);
@@ -25,15 +25,14 @@ describe("Button Test", () => {
     });
 
     test("should children be text = 'Primary'", () => {
-      const rendered = render(<Primary />);
-      const { container } = rendered;
+      const rendered = render(<Primary />)
+      const { container } = rendered
       expect(container.textContent).toEqual("Primary")
     } )
 
     test("should children be text", () => {
-      render(<Primary />);
-      const buttonElement = screen.getByRole('button');
-      console.log(buttonElement)
+      render(<Primary />)
+      const buttonElement = screen.getByRole('button')
       expect(buttonElement.textContent).toEqual(Primary.args!.children)
     } )
 
