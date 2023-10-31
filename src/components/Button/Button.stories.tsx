@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>
 
 export const Primary: Story = {
     args: {
-        children: "Primary",
+        children: "Primary"
     },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
@@ -45,6 +45,16 @@ export const Filled: Story = {
         ...Primary.args, 
         children: "Filled",
         className:"mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+    }
+}
+
+export const Click: Story = {
+    args: {
+        ...Primary.args, 
+        children: "Filled",
+        className:"mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg",
+        onClick: () => console.log("clickou")
+
     }
 }
 

@@ -33,6 +33,9 @@ export const Heading2: Story = {
         const canvas = within(canvasElement);
         const primaryHeading = canvas.getByRole("h2")
         await expect(primaryHeading).toBeInTheDocument()
+    },
+    parameters: {
+        jest: "Heading.test.tsx"
     }
 }
 

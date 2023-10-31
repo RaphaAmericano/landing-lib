@@ -18,6 +18,9 @@ export const Basic:Story = {
         const primaryDiv = canvas.getByRole("div")
         await expect(primaryDiv).toBeInTheDocument()
     },
+    parameters: {
+        jest: "ContentBlock.test.tsx"
+    }
 }
 
 export default meta;

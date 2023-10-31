@@ -18,6 +18,9 @@ export const ParagraphBasic: Story = {
         const canvas = within(canvasElement);
         const primaryHeading = canvas.getByRole("p")
         await expect(primaryHeading).toBeInTheDocument()
+    },
+    parameters: {
+        jest: "Paragraph.test.tsx"
     }
 }
 

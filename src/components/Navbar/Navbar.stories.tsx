@@ -19,9 +19,9 @@ export const Primary: Story = {
         const primaryNavbar = canvas.getByRole("section")
         await expect(primaryNavbar).toBeInTheDocument()
     },
-    // parameters: {
-    //     jest: "Navbar.test.ts"
-    // }
+    parameters: {
+        jest: "Navbar.test.ts"
+    }
 }
 
 export default meta;
